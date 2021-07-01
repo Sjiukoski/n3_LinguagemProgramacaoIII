@@ -1,0 +1,32 @@
+extends layout
+block content
+  <br/>
+  <h2> !{title} </h2>
+  <br/>
+  <p>
+    <a href='/import' class='btn btn-primary' id='importdata' style='margin-right: 5px'> Importar</a>
+    <a href='/fetchdata' class='btn btn-primary' id='fetchdata' style='margin-right: 5px'> Carregar</a>
+    <a href='/export' class='btn btn-primary' style='margin-right: 5px'> Exportar</a>
+  <br/>
+  p#message.alert.alert-success(style='display:none')
+  <br/>
+  table.table.table-bordered
+    </thead>
+      <tr>
+        <th>Distance</th>
+        <th>Consume</th>
+        <th>Speed</th>
+        <th>Temp_inside</th>
+      </tr>
+    tbody#trdata
+      <tr>
+        td(colspan='4')
+          <strong> Importar - </strong>
+          <span>para importar os dados no Banco de Dados.</span>
+          <br/>
+          <strong> Carregar - </strong>
+          <span> para carregar os dados contidos no Banco de Dados.</span>
+          <br/>
+          <strong> Exportar CSV - </strong>
+          <span>para exportar um arquivo CSV do Banco de Dados.</span>
+      </tr>

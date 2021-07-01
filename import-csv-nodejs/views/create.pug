@@ -1,0 +1,31 @@
+extends layout
+block content
+  <br/>
+  <h2> !{title} </h2>
+  <br/>
+  <p>
+    <a href='/fetchdata' class='btn btn-primary' id='fetchdata' style='margin-right: 5px'> Load data</a>
+  <br/>
+  p#message.alert.alert-success(style='display:none')
+  <br/>
+    <form action="/create" method="post">
+      <div class="mb-3" style="margin-bottom: 10px;">
+        <label for="distance" class="form-label">Distance:</label>
+        <input type="number" class="form-control" id="distance" name="distance">
+      </div>
+      <div class="mb-3" style="margin-bottom: 10px;">
+        <label for="consume" class="form-label">Consume:</label>
+        <input type="number" class="form-control" id="consume" name="consume">
+      </div>
+      <div class="mb-3" style="margin-bottom: 10px;">
+        <label for="speed" class="form-label">Speed:</label>
+        <input type="number" class="form-control" id="speed" name="speed">
+      </div>
+      <div class="mb-3" style="margin-bottom: 10px;">
+        <label for="temp_inside" class="form-label">Temp_inside:</label>
+        <input type="number" class="form-control" id="temp_inside" name="temp_inside">
+      </div>
+      <div class="mb-3" style="margin-bottom: 10px;">
+      <button type="submit" class="btn btn-success">Adicionar</button>
+      </div>
+    </form>
